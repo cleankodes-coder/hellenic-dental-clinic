@@ -1,0 +1,6 @@
+{
+  "name": "Hellenic Dental Clinic Dubai — Luxury Dentistry & Clinical Operations",
+  "description": "Private concept demo for Hellenic Dental Clinic, Dubai (Al Wasl Road). Featuring a 3D dental hero experience, real appointment scheduling engine, desktop management portal, and Gemini AI receptionist.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

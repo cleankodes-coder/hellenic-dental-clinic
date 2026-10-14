@@ -1,0 +1,33 @@
+{
+  "name": "Hellenic Dental Clinic",
+  "tagline": "Confidence Begins With a Healthy Smile",
+  "description": "Premier boutique dental clinic located on prestigious Al Wasl Road in Dubai, offering world-class aesthetic smile architecture, precision orthodontics, oral surgery, and compassionate restorative care.",
+  "officialWebsite": "https://hellenicdentalclinic.com/",
+  "instagram": "https://www.instagram.com/hellenicdentalclinic/",
+  "googleMapsUrl": "https://maps.google.com/?q=Hellenic+Dental+Clinic+Al+Wasl+Road+Dubai",
+  "address": {
+    "street": "Villa / Building 4, Al Wasl Road",
+    "district": "Al Bada'a",
+    "landmark": "Near City Walk & Iranian Hospital",
+    "city": "Dubai",
+    "country": "United Arab Emirates",
+    "timezone": "Asia/Dubai",
+    "coordinates": {
+      "lat": 25.2155,
+      "lng": 55.2635
+    }
+  },
+  "contact": {
+    "landline": "+971 4 349 0422",
+    "formattedPhone": "+971 4 349 0422",
+    "whatsapp": "+971 4 349 0422",
+    "email": "info@hellenicdentalclinic.com",
+    "receptionEmail": "reception@hellenicdentalclinic.com"
+  },
+  "openingHours": [
+    { "days": "Monday – Friday", "hours": "09:30 – 20:00", "isWorkingDay": true },
+    { "days": "Saturday", "hours": "09:30 – 19:00", "isWorkingDay": true },
+    { "days": "Sunday", "hours": "11:00 – 17:00", "isWorkingDay": true }
+  ],
+  "disclaimer": "Concept Demo — Not an Official Clinic Booking Service. Fictional demo data for concept evaluation only."
+}

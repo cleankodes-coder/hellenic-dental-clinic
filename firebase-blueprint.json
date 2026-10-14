@@ -1,0 +1,141 @@
+{
+  "entities": {
+    "Doctor": {
+      "title": "Doctor",
+      "description": "Provisional staff member at Hellenic Dental Clinic",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "slug": { "type": "string", "maxLength": 100 },
+        "title": { "type": "string", "maxLength": 150 },
+        "specialty": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "maxLength": 50 },
+        "image": { "type": "string", "maxLength": 255 },
+        "isAuthenticPortrait": { "type": "boolean" },
+        "workingDays": { "type": "array" },
+        "shiftStart": { "type": "string" },
+        "shiftEnd": { "type": "string" },
+        "slotIntervalMinutes": { "type": "number" },
+        "status": { "type": "string", "enum": ["active", "on_leave", "inactive"] }
+      },
+      "required": ["id", "name", "slug", "specialty", "status"]
+    },
+    "Service": {
+      "title": "Service",
+      "description": "Published clinical dental treatment",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "slug": { "type": "string", "maxLength": 100 },
+        "name": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "maxLength": 100 },
+        "shortDescription": { "type": "string", "maxLength": 300 },
+        "fullDescription": { "type": "string", "maxLength": 2000 },
+        "durationMinutes": { "type": "number" },
+        "compatibleDoctorIds": { "type": "array" },
+        "isActive": { "type": "boolean" }
+      },
+      "required": ["id", "slug", "name", "durationMinutes"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Synthetic appointment request and scheduled slot record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "reference": { "type": "string", "maxLength": 20 },
+        "doctorId": { "type": "string" },
+        "doctorName": { "type": "string" },
+        "serviceId": { "type": "string" },
+        "serviceName": { "type": "string" },
+        "date": { "type": "string" },
+        "startTime": { "type": "string" },
+        "endTime": { "type": "string" },
+        "durationMinutes": { "type": "number" },
+        "patientName": { "type": "string", "maxLength": 150 },
+        "patientEmail": { "type": "string", "maxLength": 150 },
+        "patientPhone": { "type": "string", "maxLength": 50 },
+        "patientNotes": { "type": "string", "maxLength": 1000 },
+        "status": { "type": "string", "enum": ["Pending", "Confirmed", "Completed", "Cancelled", "Rejected", "No-show"] },
+        "receptionNotes": { "type": "string", "maxLength": 1000 },
+        "cancellationReason": { "type": "string", "maxLength": 500 },
+        "source": { "type": "string", "enum": ["website", "portal", "ai_concierge", "phone"] },
+        "createdAt": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "reference", "doctorId", "serviceId", "date", "startTime", "patientName", "status"]
+    },
+    "SlotLock": {
+      "title": "SlotLock",
+      "description": "Provisional lock to prevent scheduling race conditions",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "doctorId": { "type": "string" },
+        "date": { "type": "string" },
+        "startTime": { "type": "string" },
+        "expiresAt": { "type": "string" },
+        "lockToken": { "type": "string" }
+      },
+      "required": ["id", "doctorId", "date", "startTime", "expiresAt"]
+    },
+    "Enquiry": {
+      "title": "Enquiry",
+      "description": "Fictional patient contact or query request",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "maxLength": 150 },
+        "email": { "type": "string", "maxLength": 150 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "subject": { "type": "string", "maxLength": 200 },
+        "message": { "type": "string", "maxLength": 2000 },
+        "status": { "type": "string", "enum": ["New", "In Review", "Resolved", "Archived"] },
+        "notes": { "type": "string", "maxLength": 1000 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "name", "email", "message", "status"]
+    },
+    "ClinicSettings": {
+      "title": "ClinicSettings",
+      "description": "Configurable parameters for clinic scheduling and rules",
+      "type": "object",
+      "properties": {
+        "clinicHours": { "type": "object" },
+        "minimumLeadHours": { "type": "number" },
+        "holdDurationMinutes": { "type": "number" },
+        "slotStepMinutes": { "type": "number" },
+        "bufferBetweenAppointmentsMinutes": { "type": "number" },
+        "allowInstantHold": { "type": "boolean" },
+        "notificationSimulated": { "type": "boolean" }
+      }
+    }
+  },
+  "firestore": {
+    "/doctors/{doctorId}": {
+      "schema": { "$ref": "#/entities/Doctor" },
+      "description": "Collection of dental clinic medical staff"
+    },
+    "/services/{serviceId}": {
+      "schema": { "$ref": "#/entities/Service" },
+      "description": "Collection of published treatments and procedures"
+    },
+    "/bookings/{bookingId}": {
+      "schema": { "$ref": "#/entities/Booking" },
+      "description": "Authoritative persistent appointments and requests"
+    },
+    "/slotLocks/{lockId}": {
+      "schema": { "$ref": "#/entities/SlotLock" },
+      "description": "Temporary mutex slot locks preventing double booking"
+    },
+    "/enquiries/{enquiryId}": {
+      "schema": { "$ref": "#/entities/Enquiry" },
+      "description": "Patient general enquiries from public contact form"
+    },
+    "/clinicSettings/global": {
+      "schema": { "$ref": "#/entities/ClinicSettings" },
+      "description": "Global operational rules and clinic configurations"
+    }
+  }
+}

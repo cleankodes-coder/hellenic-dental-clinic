@@ -1,0 +1,279 @@
+[
+  {
+    "id": "cosmetic",
+    "name": "Cosmetic & Aesthetic Dentistry",
+    "tagline": "Architecting naturally radiant, proportional smiles",
+    "description": "State-of-the-art smile design integrating ceramic craftsmanship, facial aesthetics, and minimally invasive protocols.",
+    "icon": "Sparkles",
+    "services": [
+      {
+        "id": "porcelain-veneers",
+        "slug": "porcelain-veneers",
+        "name": "Custom Porcelain Veneers",
+        "shortDescription": "Handcrafted ultra-thin ceramic shells customized to reshape, whiten, and align front teeth.",
+        "fullDescription": "Our custom porcelain veneers represent the pinnacle of cosmetic dental artistry. Using digital 3D facial scanning and ultra-thin feldspathic and E.max ceramics, veneers are custom-milled and hand-layered to correct discoloration, gaps, chipped edges, and minor misalignment while conserving maximum natural enamel.",
+        "durationMinutes": 60,
+        "suitableFor": ["Worn or chipped teeth", "Deep intrinsic discoloration", "Gaps and spacing", "Minor crowding"],
+        "processSteps": [
+          { "step": "Comprehensive 3D Smile Design consultation & photographic mapping", "duration": "Session 1" },
+          { "step": "Conservative preparation, digital intraoral scan, and provisional veneers", "duration": "Session 2" },
+          { "step": "Precision bonding of master ceramic veneers and bite balance check", "duration": "Session 3" }
+        ],
+        "faqs": [
+          { "q": "How long do porcelain veneers last?", "a": "With diligent oral hygiene and regular dental checkups, high-grade porcelain veneers typically last 10 to 15 years or longer." },
+          { "q": "Is the procedure painful?", "a": "No, local anesthesia ensures total comfort during tooth preparation and adhesive cementation." },
+          { "q": "Do veneers look artificial?", "a": "At Hellenic Dental Clinic, our philosophy is natural translucency and individual anatomical detailing, matching your natural facial proportions." }
+        ],
+        "compatibleDoctorIds": ["dr-eleni-tzomaa", "dr-majd-alrabadi"]
+      },
+      {
+        "id": "composite-bonding",
+        "slug": "composite-bonding",
+        "name": "Composite Edge Bonding",
+        "shortDescription": "Single-visit resin sculpting to fix chips, close black triangles, and enhance symmetry.",
+        "fullDescription": "Composite bonding uses multi-layered nano-hybrid resins directly sculpted onto teeth to repair minor chips, close gaps, or restore worn incisal edges in a single comfortable appointment with zero or negligible enamel reduction.",
+        "durationMinutes": 45,
+        "suitableFor": ["Minor enamel chips", "Diastemas (gaps)", "Irregular tooth edges", "Discolored spots"],
+        "processSteps": [
+          { "step": "Color matching using shade guides and mock-up", "duration": "10 mins" },
+          { "step": "Micro-etching and bonding agent application", "duration": "10 mins" },
+          { "step": "Artistic freehand resin layering, light-curing, and high-gloss polish", "duration": "25 mins" }
+        ],
+        "faqs": [
+          { "q": "Is enamel removed for composite bonding?", "a": "In most cases, bonding is an additive technique requiring little to no enamel removal." },
+          { "q": "Can bonded teeth be whitened later?", "a": "Composite resins do not respond to whitening agents, so we recommend whitening your natural teeth prior to bonding." }
+        ],
+        "compatibleDoctorIds": ["dr-eleni-tzomaa", "dr-majd-alrabadi", "dr-firas-alshak-khallel"]
+      },
+      {
+        "id": "teeth-whitening",
+        "slug": "teeth-whitening",
+        "name": "Professional Laser Teeth Whitening",
+        "shortDescription": "Safe, clinically supervised in-office whitening combined with custom take-home maintenance.",
+        "fullDescription": "Safe in-clinic laser teeth whitening penetrates stubborn stains caused by coffee, tea, smoking, and aging. Formulated with desensitizing agents to deliver noticeably brighter results in under an hour while preserving enamel integrity.",
+        "durationMinutes": 45,
+        "suitableFor": ["Extrinsic staining", "Pre-event smile rejuvenation", "Natural age-related yellowing"],
+        "processSteps": [
+          { "step": "Gingival barrier protection application", "duration": "10 mins" },
+          { "step": "Light-activated whitening gel cycles (3 x 12 min)", "duration": "30 mins" },
+          { "step": "Post-treatment remineralization and shade evaluation", "duration": "5 mins" }
+        ],
+        "faqs": [
+          { "q": "Will whitening make my teeth sensitive?", "a": "Our clinic uses buffered, pH-balanced gels with potassium nitrate to significantly minimize transient sensitivity." },
+          { "q": "How long will the whitening effect remain?", "a": "Results usually last 12 to 24 months, depending on lifestyle factors such as dietary staining and smoking." }
+        ],
+        "compatibleDoctorIds": ["dr-eleni-tzomaa", "dr-majd-alrabadi", "dr-firas-alshak-khallel"]
+      }
+    ]
+  },
+  {
+    "id": "orthodontics",
+    "name": "Orthodontics & Aligner Therapy",
+    "tagline": "Precision digital tooth movement and bite harmony",
+    "description": "Discreet clear aligners and modern low-friction orthodontic mechanics tailored for teenage and adult lifestyles.",
+    "icon": "Smile",
+    "services": [
+      {
+        "id": "clear-aligners",
+        "slug": "clear-aligners",
+        "name": "Digital Clear Aligners",
+        "shortDescription": "Removable transparent aligners mapped using 3D digital simulation for subtle straightening.",
+        "fullDescription": "Custom-designed transparent aligners systematically guide teeth into their ideal alignment using digital orthodontic simulations. Removable for eating, brushing, and special occasions, they offer discreet correction for crowding, spacing, and bite irregularities.",
+        "durationMinutes": 45,
+        "suitableFor": ["Mild to moderate crowding", "Spaces between teeth", "Post-braces orthodontic relapse", "Deep bites"],
+        "processSteps": [
+          { "step": "Digital 3D intraoral scan and computerized treatment simulation", "duration": "Session 1" },
+          { "step": "Delivery of initial aligner sets and attachment placement", "duration": "Session 2" },
+          { "step": "Periodic progress monitoring every 6-8 weeks", "duration": "Follow-ups" }
+        ],
+        "faqs": [
+          { "q": "How many hours per day must aligners be worn?", "a": "For optimal results, aligners should be worn 20 to 22 hours daily, removed only for meals and oral hygiene." },
+          { "q": "Are clear aligners noticeable?", "a": "They are crafted from medical-grade transparent thermoplastic, making them virtually invisible in daily conversation." }
+        ],
+        "compatibleDoctorIds": ["dr-mada-jeshi"]
+      },
+      {
+        "id": "orthodontic-consultation",
+        "slug": "orthodontic-consultation",
+        "name": "Comprehensive Orthodontic Evaluation",
+        "shortDescription": "Full orthodontic diagnosis including facial profile assessment and digital scan.",
+        "fullDescription": "An exhaustive clinical and aesthetic assessment by our Specialist Orthodontist covering jaw alignment, tooth crowding, airway considerations, and personalized options (clear aligners vs. ceramic brackets).",
+        "durationMinutes": 30,
+        "suitableFor": ["Adults and teens considering alignment", "Parents seeking early child evaluation", "Relapse checks"],
+        "processSteps": [
+          { "step": "Facial aesthetics and jaw relation examination", "duration": "15 mins" },
+          { "step": "Intraoral digital scanning and photographic records", "duration": "10 mins" },
+          { "step": "Custom treatment roadmap discussion", "duration": "10 mins" }
+        ],
+        "faqs": [
+          { "q": "What is the best age for an orthodontic consultation?", "a": "The American Association of Orthodontists recommends an initial evaluation by age 7, though adult orthodontics is equally successful." }
+        ],
+        "compatibleDoctorIds": ["dr-mada-jeshi"]
+      }
+    ]
+  },
+  {
+    "id": "oral-surgery",
+    "name": "Oral Surgery & Dental Implants",
+    "tagline": "Permanent tooth replacement and hospital-grade surgical care",
+    "description": "Advanced surgical rehabilitation by our Consultant Oral Surgeon, utilizing Swiss and German implant systems.",
+    "icon": "ShieldAlert",
+    "services": [
+      {
+        "id": "dental-implants",
+        "slug": "dental-implants",
+        "name": "Precision Dental Implants",
+        "shortDescription": "Biocompatible titanium and ceramic root replacements supporting permanent crowns and bridges.",
+        "fullDescription": "Dental implants are the gold standard for replacing missing teeth. Acting as an artificial tooth root integrated into the jawbone, they restore 100% chewing function, prevent bone resorption, and support lifelike custom ceramic crowns.",
+        "durationMinutes": 60,
+        "suitableFor": ["Single missing tooth", "Multiple tooth loss", "Loose dentures", "Failing bridge replacements"],
+        "processSteps": [
+          { "step": "3D CBCT digital bone scan and computer-guided surgical planning", "duration": "Session 1" },
+          { "step": "Atraumatic implant fixture placement with local anesthesia", "duration": "Session 2" },
+          { "step": "Healing phase & osseointegration verification", "duration": "8-12 weeks" },
+          { "step": "Custom zirconia crown fixation and functional check", "duration": "Final Session" }
+        ],
+        "faqs": [
+          { "q": "Is dental implant placement painful?", "a": "Most patients report less discomfort than a standard tooth extraction, with mild soreness managed via simple pain relief." },
+          { "q": "What is the success rate of dental implants?", "a": "Clinically placed implants have a recognized international success rate exceeding 95-98%." }
+        ],
+        "compatibleDoctorIds": ["dr-mohammad-hayem"]
+      },
+      {
+        "id": "wisdom-teeth-extraction",
+        "slug": "wisdom-teeth-extraction",
+        "name": "Surgical Wisdom Tooth Removal",
+        "shortDescription": "Gentle, atraumatic removal of impacted or painful third molars under local anesthesia.",
+        "fullDescription": "Impacted wisdom teeth can cause recurrent pericoronitis, root damage to adjacent molars, and cyst formation. Our Consultant Oral Surgeon performs minimally invasive extractions with advanced healing protocols and PRF (platelet-rich fibrin) when indicated.",
+        "durationMinutes": 45,
+        "suitableFor": ["Impacted lower/upper wisdom teeth", "Recurrent gum inflammation", "Preventative pre-orthodontic extraction"],
+        "processSteps": [
+          { "step": "Radiographic evaluation and nerve relationship mapping", "duration": "10 mins" },
+          { "step": "Gentle surgical sectioning and atraumatic tooth elevation", "duration": "25 mins" },
+          { "step": "Hemostasis and dissolvable suture placement", "duration": "10 mins" }
+        ],
+        "faqs": [
+          { "q": "How long is the recovery period?", "a": "Most patients resume light desk work within 48 hours, with full soft tissue healing over 7 to 10 days." }
+        ],
+        "compatibleDoctorIds": ["dr-mohammad-hayem"]
+      }
+    ]
+  },
+  {
+    "id": "restorative",
+    "name": "Restorative Dentistry & Endodontics",
+    "tagline": "Biomimetic tooth preservation and microscopic root canal therapy",
+    "description": "Saving compromised natural teeth using advanced magnification, ceramic bonding, and durable biocompatible materials.",
+    "icon": "HeartPulse",
+    "services": [
+      {
+        "id": "root-canal-therapy",
+        "slug": "root-canal-therapy",
+        "name": "Microscopic Root Canal Therapy",
+        "shortDescription": "Pain-relieving treatment to remove infected pulp, disinfect canals, and seal the natural tooth.",
+        "fullDescription": "When tooth decay or trauma reaches the nerve pulp, root canal therapy cleanses and hermetically seals the root canal anatomy. Conducted under high magnification to locate accessory canals and ensure complete sterilization.",
+        "durationMinutes": 60,
+        "suitableFor": ["Severe toothache or throbbing pain", "Pain upon hot/cold stimulation", "Dental abscess or swelling"],
+        "processSteps": [
+          { "step": "Profound local anesthesia and rubber dam isolation", "duration": "10 mins" },
+          { "step": "Microscopic cleaning, rotary shaping, and laser/ultrasonic irrigation", "duration": "35 mins" },
+          { "step": "Bioceramic 3D obturation and temporary/definitive seal", "duration": "15 mins" }
+        ],
+        "faqs": [
+          { "q": "Does a root canal hurt?", "a": "Modern rotary and microscopic root canal treatment relieves pain rather than causing it. Patients remain numb and relaxed throughout." }
+        ],
+        "compatibleDoctorIds": ["dr-firas-alshak-khallel"]
+      },
+      {
+        "id": "dental-crowns-bridges",
+        "slug": "dental-crowns-bridges",
+        "name": "Zirconia & E.max Ceramic Crowns",
+        "shortDescription": "Full-coverage ceramic caps engineered to restore cracked, heavily filled, or post-root-canal teeth.",
+        "fullDescription": "Crafted from monolithic zirconia or high-strength lithium disilicate (E.max), custom crowns restore full structural strength, chew resistance, and lifelike aesthetics to severely compromised natural teeth.",
+        "durationMinutes": 45,
+        "suitableFor": ["Teeth after root canal treatment", "Severely cracked teeth", "Replacing old defective metal crowns"],
+        "processSteps": [
+          { "step": "Tooth preparation and optical digital impression", "duration": "Session 1" },
+          { "step": "Laboratory CAD/CAM milling and characterization", "duration": "Laboratory" },
+          { "step": "Definitive adhesive bonding and occlusion adjustment", "duration": "Session 2" }
+        ],
+        "faqs": [
+          { "q": "Do ceramic crowns show dark gray lines at the gumline?", "a": "No, our all-ceramic zirconia and E.max crowns are completely metal-free, ensuring permanently natural gum margins." }
+        ],
+        "compatibleDoctorIds": ["dr-firas-alshak-khallel", "dr-eleni-tzomaa"]
+      }
+    ]
+  },
+  {
+    "id": "pediatric",
+    "name": "Pediatric Dental Care",
+    "tagline": "Gentle, fear-free foundation for lifelong oral health",
+    "description": "Specialized dental care for toddlers and children in an empathetic, warm, and playful environment.",
+    "icon": "Baby",
+    "services": [
+      {
+        "id": "pediatric-checkup",
+        "slug": "pediatric-checkup",
+        "name": "Child Dental Checkup & Hygiene",
+        "shortDescription": "Fun, educational checkup tailored for children with gentle cleaning and fluoride protection.",
+        "fullDescription": "Designed to establish trust and positive dental habits early. Includes tooth development monitoring, gentle plaque removal, dietary counseling, and painless preventative fluoride varnish.",
+        "durationMinutes": 30,
+        "suitableFor": ["Infants from first tooth", "Toddlers & young children", "Children with dental anxiety"],
+        "processSteps": [
+          { "step": "Playful familiarization with dental chair & instruments ('tell-show-do')", "duration": "10 mins" },
+          { "step": "Gentle visual examination and light cleaning", "duration": "15 mins" },
+          { "step": "Protective fruit-flavored fluoride application and brave-patient reward", "duration": "5 mins" }
+        ],
+        "faqs": [
+          { "q": "Why are baby teeth important if they fall out?", "a": "Baby teeth preserve jaw spacing for adult teeth, assist speech development, and enable healthy nutrition without chronic pain." }
+        ],
+        "compatibleDoctorIds": ["dr-kashmira-pawar"]
+      }
+    ]
+  },
+  {
+    "id": "preventative",
+    "name": "Preventative Health & Hygiene",
+    "tagline": "Protecting gum health and tooth longevity",
+    "description": "Routine dental exams, ultrasonic airflow scaling, and comprehensive periodontal maintenance.",
+    "icon": "Activity",
+    "services": [
+      {
+        "id": "preventative-scaling",
+        "slug": "preventative-scaling",
+        "name": "Airflow & Ultrasonic Prophylaxis",
+        "shortDescription": "Removal of calculus, tartar, and coffee/tea stains with gentle warm airflow powder.",
+        "fullDescription": "Our preventative hygiene protocol utilizes gentle piezoelectric ultrasonic scaling followed by Swiss Airflow technology. Warm water and erythritol powder gently remove stubborn plaque and surface stains without scratching enamel or sensitive root surfaces.",
+        "durationMinutes": 30,
+        "suitableFor": ["Routine 6-month cleaning", "Smokers and coffee drinkers", "Gingivitis and bleeding gums"],
+        "processSteps": [
+          { "step": "Gum pocket depth and bleeding index check", "duration": "5 mins" },
+          { "step": "Ultrasonic calculus removal", "duration": "15 mins" },
+          { "step": "Warm Airflow stain removal and fluoridation polish", "duration": "10 mins" }
+        ],
+        "faqs": [
+          { "q": "How often should I have my teeth professionally cleaned?", "a": "Every 6 months is recommended for healthy gums; patients with a history of periodontal disease benefit from 3 to 4-month maintenance." }
+        ],
+        "compatibleDoctorIds": ["dr-majd-alrabadi", "dr-ayesha-mansha", "dr-eleni-tzomaa", "dr-firas-alshak-khallel"]
+      },
+      {
+        "id": "general-checkup",
+        "slug": "general-checkup",
+        "name": "Comprehensive Clinical Examination",
+        "shortDescription": "Thorough visual, radiographic, and oral cancer screening with high-definition intraoral photography.",
+        "fullDescription": "An unhurried 30-minute complete oral health screening. Our dentists check for early enamel demineralization, gum health, bite function, and oral cancer signs, accompanied by clear photos shown on screen.",
+        "durationMinutes": 30,
+        "suitableFor": ["New patients", "Annual comprehensive reviews", "Second opinions"],
+        "processSteps": [
+          { "step": "Medical history review and patient concerns discussion", "duration": "5 mins" },
+          { "step": "Tooth-by-tooth exam and digital intraoral photography", "duration": "15 mins" },
+          { "step": "Transparent findings review and treatment planning", "duration": "10 mins" }
+        ],
+        "faqs": [
+          { "q": "Will I receive a treatment plan immediately?", "a": "Yes, complete with prioritized findings, transparent procedural explanations, and no pressure." }
+        ],
+        "compatibleDoctorIds": ["dr-eleni-tzomaa", "dr-firas-alshak-khallel", "dr-majd-alrabadi", "dr-ayesha-mansha"]
+      }
+    ]
+  }
+]

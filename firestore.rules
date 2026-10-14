@@ -1,0 +1,83 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helper functions
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Public readable collections
+    match /doctors/{doctorId} {
+      allow get, list: if true;
+      allow write: if isSignedIn();
+    }
+
+    match /services/{serviceId} {
+      allow get, list: if true;
+      allow write: if isSignedIn();
+    }
+
+    match /clinicSettings/{settingId} {
+      allow get: if true;
+      allow write: if isSignedIn();
+    }
+
+    // Bookings collection
+    match /bookings/{bookingId} {
+      // Anyone can look up their own booking by reference or ID if authorized or submitted
+      allow get: if true;
+      allow list: if isSignedIn();
+      // Public appointment request creation with schema validation
+      allow create: if (
+        incoming().keys().hasAll(['id', 'reference', 'doctorId', 'serviceId', 'date', 'startTime', 'patientName', 'status']) &&
+        incoming().patientName is string && incoming().patientName.size() <= 150 &&
+        incoming().status == 'Pending' &&
+        isValidId(bookingId)
+      );
+      // Only authorized staff can update status (Confirm, Cancel, Reschedule, Complete)
+      allow update: if isSignedIn();
+      allow delete: if isSignedIn();
+    }
+
+    // Slot locks for preventing race condition conflicts
+    match /slotLocks/{lockId} {
+      allow read: if true;
+      allow create, update: if (
+        incoming().keys().hasAll(['id', 'doctorId', 'date', 'startTime', 'expiresAt']) &&
+        isValidId(lockId)
+      );
+      allow delete: if true;
+    }
+
+    // Enquiries from public contact form
+    match /enquiries/{enquiryId} {
+      allow create: if (
+        incoming().keys().hasAll(['id', 'name', 'email', 'message', 'status']) &&
+        incoming().name is string && incoming().name.size() <= 150 &&
+        incoming().message is string && incoming().message.size() <= 2000 &&
+        incoming().status == 'New' &&
+        isValidId(enquiryId)
+      );
+      allow read, update, delete: if isSignedIn();
+    }
+  }
+}
